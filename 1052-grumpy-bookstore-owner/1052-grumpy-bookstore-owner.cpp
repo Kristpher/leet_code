@@ -8,6 +8,7 @@ public:
            sum+=customers[i];
         }
         int maxim=sum;
+        
         for(int i=1;i<=n-minutes;i++)
         {
            
@@ -32,10 +33,10 @@ public:
         for(int i=0;i<n;i++)
         {
             if(grumpy[i]==0){
-            sum+=customers[i];
+            maxim+=customers[i];
            
             }
         }
-        return sum;
+        return maxim;
     }
 };
