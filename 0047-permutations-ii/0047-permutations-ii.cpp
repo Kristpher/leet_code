@@ -1,26 +1,36 @@
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 class Solution {
 public:
-    void recur(set<vector<int>>& out, vector<int>& v, vector<int>& nums, vector<int>& freq) {
+    void recur(vector<vector<int>>& out, vector<int>& v, vector<int>& nums, vector<bool>& freq) {
         if (v.size() == nums.size()) {
-            out.insert(v);
+            out.push_back(v);
             return;
         }
         for (int i = 0; i < nums.size(); i++) {
             if (!freq[i]) {
+               
+                if (i > 0 && nums[i] == nums[i - 1] && !freq[i - 1]) {
+                    continue;
+                }
                 v.push_back(nums[i]);
-                freq[i] = 1;
+                freq[i] = true;
                 recur(out, v, nums, freq);
-                freq[i] = 0;
+                freq[i] = false;
                 v.pop_back();
             }
         }
     }
+
     vector<vector<int>> permuteUnique(vector<int>& nums) {
-         set<vector<int>> out;
+        vector<vector<int>> out;
         vector<int> v;
-        vector<int> freq(nums.size(), 0);
+        vector<bool> freq(nums.size(), false);
+        sort(nums.begin(), nums.end()); 
         recur(out, v, nums, freq);
-        vector<vector<int>>all(out.begin(),out.end());
-        return all;
+        return out;
     }
 };
