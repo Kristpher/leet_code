@@ -12,15 +12,18 @@ public:
         sum2+=i;
      }
      int i=(n/2)+2;
+     cout<<sum1<<" "<<sum2;
      while(sum1<=sum2)
      {
        if(sum1==sum2)
-       return i;
+       return i-1;
        else
        {
         sum1+=i;
         sum2-=i-1;
+      
        }
+       i++;
      }
     
      
