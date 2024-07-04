@@ -23,6 +23,7 @@ public:
         return true;
     if(abs(height(root->right)-height(root->left))>1){
             return false;
+    }
             return (check(root->left)&&check(root->right));
         
     } 
