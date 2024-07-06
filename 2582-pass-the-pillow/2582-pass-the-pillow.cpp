@@ -13,8 +13,6 @@ public:
     ans=1+(time%(n-1));
     else
     ans=n-(time%(n-1));
-       
-       
     return ans;
     }
 };
