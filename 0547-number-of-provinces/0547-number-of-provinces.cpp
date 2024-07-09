@@ -5,7 +5,7 @@ public:
         v[ind] = 1;
 
     
-        for (int j = 0; j < isConnected.size(); j++) {
+        for (int j = 0; j < isConnected[ind].size(); j++) {
             if (isConnected[ind][j] == 1 && v[j] == 0) {
                 province(v, isConnected, j);
             }
