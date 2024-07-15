@@ -34,9 +34,9 @@ public:
 
         TreeNode* ptr = nullptr;
         for (int i = 0; i < descriptions.size(); i++) {
-            int parentVal = descriptions[i][0];
-            if (map2.find(parentVal) == map2.end()) {
-                ptr = map1[parentVal];
+            int p = descriptions[i][0];
+            if (!map2.count(p)) {
+                ptr = map1[p];
                 break;
             }
         }
