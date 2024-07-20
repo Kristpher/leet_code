@@ -9,7 +9,9 @@ public:
         int len=0;
         for(int i=0;i<s.length();i++){
         if(map1.count(s[i])){
+        if(map1[s[i]]>l)    
         l=map1[s[i]];  
+        cout<<l<<" "<<endl;
         }
          map1[s[i]]=i+1;
         len=max(len,i-l+1);
