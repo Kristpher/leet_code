@@ -7,10 +7,10 @@ public:
         
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                int minValue = min(rowSum[i], colSum[j]);
-                matrix[i][j] = minValue;
-                rowSum[i] -= minValue;
-                colSum[j] -= minValue;
+                int minim = min(rowSum[i], colSum[j]);
+                matrix[i][j] = minim;
+                rowSum[i] -= minim;
+                colSum[j] -= minim;
             }
         }
         
