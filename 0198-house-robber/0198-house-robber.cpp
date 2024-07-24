@@ -3,6 +3,8 @@ public:
     int recur(vector<int>& nums,vector<int>& dp,int n){
         if(n<0)
         return 0;
+        if(dp[n]!=-1)
+        return dp[n];
         int two=recur(nums,dp,n-2)+nums[n];
         int one=recur(nums,dp,n-1);
         return dp[n]=max(one,two);
