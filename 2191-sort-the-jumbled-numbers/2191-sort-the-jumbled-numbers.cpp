@@ -26,7 +26,7 @@ public:
         for(int i=0;i<nums.size();i++)
         {
             nums[i]=v[i].first;
-            cout<<v[i].second<<" ";
+            //cout<<v[i].second<<" ";
         }
         return nums;
     }
