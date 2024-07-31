@@ -33,6 +33,9 @@ public:
             }
 
         }
-  return out;
+if(out.size()==numCourses){
+  return out;}
+  else
+  return {};
     }
 };
