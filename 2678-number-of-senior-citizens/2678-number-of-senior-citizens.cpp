@@ -7,8 +7,8 @@ public:
      temp="";
      temp+=details[i][11];
      temp+=details[i][12];
-     int a=stoi(temp);
-     if(a>60)
+     
+     if(temp>"60")
      count++;
 
      }   
