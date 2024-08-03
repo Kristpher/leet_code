@@ -32,7 +32,7 @@ public:
         ptr = head;
 
         while (ptr2 != NULL) {
-            if (ptr == NULL || ptr->val != ptr2->val) {
+            if ( ptr->val != ptr2->val) {
                 return false;
             }
             ptr = ptr->next;
