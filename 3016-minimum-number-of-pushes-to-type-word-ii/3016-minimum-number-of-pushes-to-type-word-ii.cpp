@@ -12,7 +12,7 @@ public:
         }
         for (int i = 0; i < word.length(); i++) {
             v[word[i] - 'a'].second++;
-             cout<<v[word[i] - 'a'].second;
+          
         }
         sort(v.begin(), v.end(), comp);
         int count = 0;
